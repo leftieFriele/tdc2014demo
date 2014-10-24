@@ -1,13 +1,17 @@
 {
-  "name": "trojan-sample",
-  "verison": "0.0.1",
+  "name": "guerilla",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {
-  	"package": "node build.js"
+    "package": "./node_modules/.bin/browserify lib/index.js -o dist/guerilla.js && node build.js"
   },
   "dependencies": {
     "maven-deploy": "0.0.3",
     "request": "^2.45.0",
     "browserify": "^6.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.1.0",
+    "maven-deploy": "0.0.3"
   }
 }

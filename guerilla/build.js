@@ -1,27 +1,38 @@
 var browserify 		= require('browserify');
 var fs 				= require('fs');
 var maven 			= require('maven-deploy');
+/*
+if (fs.existsSync('./dist')) {
+	var exec = require( 'child_process' ).exec;
+	var path = './dist';
 
-if (!fs.existsSync('./build')) {
-	fs.mkdirSync('build');
+	exec( 'rm -r ' + path, function ( err, stdout, stderr ){
+	fs.mkdirSync('dist');
+		package();
+		deploy();
+	});
 }
 
-// Browserify everything
-var b = browserify();
-b.add('./lib/index.js');
-b.bundle().pipe(fs.createWriteStream('./build/bundle.js'));
+function package(){
+	// Browserify everything
+	var b = browserify();
+	b.add('./lib/index.js');
+	b.bundle().pipe(fs.createWriteStream('./dist/guerilla.js'));
+}
 
-// Mavenify the built artifact into a war file
-var config = {
-	"groupId": "com.dallokken",
-	"buildDir": "dist",
-	"finalName": "trojan.war",
-	"type": "war",
-	"fileEncoding": "UTF-8",
-	"repositories": {
-		"id": "some-external-repo",
-		"url": "http://localhost/some-external-repo"
-	}
-};
-maven.config(config);
-maven.install();
+function deploy(){*/
+	console.log('sss')
+	// Mavenify the built artifact into a war file
+	var config = {
+		"groupId": "com.dallokken",
+		"buildDir": "dist",
+		"type": "war",
+		"fileEncoding": "UTF-8",
+		"repositories": {
+			"id": "some-external-repo",
+			"url": "http://localhost/some-external-repo"
+		}
+	};
+	maven.config(config);
+	maven.install();
+//}
