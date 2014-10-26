@@ -12,6 +12,9 @@ This is a gueriall NodeJS module which produces a WAR-file which can be used ins
 - lib
 -- index.js - simple module which returns Bacone content from the JSON API
 
+## Future
+Simple sample showing how to easily leverage things like Traceur
+
 ## Trojan
 This is a Java Web Applciation which uses Node+NPM to package front-end assets.
 It uses the [Maven Front-end plugin](https://github.com/eirslett/frontend-maven-plugin) to introduce the Node trojan horse.
