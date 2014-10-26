@@ -1,0 +1,18 @@
+{
+  "name": "future-trojan-war",
+  "version": "0.0.1",
+  "scripts": {
+    "futurify": "./node_modules/.bin/traceur --modules commonjs --dir src/main/webapp/js target/future-trojan-war/js --arrow-functions true",
+    "modulify": "./node_modules/.bin/browserify --entry target/future-trojan-war/js/main.js -o target/future-trojan-war/js/bundle.js",
+    "package": "npm run futurify && npm run modulify"
+  },
+  "dependencies": {
+    "browser-request": "^0.3.2"
+  },
+  "devDependencies": {
+    "browserify": "^6.1.0",
+    "mocha": "^2.0.1",
+    "traceur": "0.0.72",
+    "uglify-js": "^2.4.15"
+  }
+}
