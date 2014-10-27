@@ -21,7 +21,6 @@ function package(){
 }
 
 function deploy(){*/
-	console.log('sss')
 	// Mavenify the built artifact into a war file
 	var config = {
 		"groupId": "com.dallokken",

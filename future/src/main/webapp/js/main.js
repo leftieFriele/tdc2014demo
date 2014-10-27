@@ -1,4 +1,4 @@
 
 var trojan = require('./trojan');
 
-console.log(trojan('is awesome!'));
+document.getElementById('FutureIs').innerHTML = trojan('is awesome!');
